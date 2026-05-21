@@ -1,15 +1,16 @@
+require("dotenv").config()
 const express = require ("express")
 const app = express()
+
+
 
 app.use(express.json())
 
 const mongoose = require("mongoose")
 
-const  DbConection = async ()=> {
-    
-{
+async function dbconnection() {
 try{
-     await mongoose.connect(process.env.DB_URL)
+    await mongoose.connect(process.env.DB_URL)
 
     console.log("server connect")
 
@@ -18,15 +19,13 @@ try{
     catch(error){
         console.log("there is a problem in the server")
     }
+}
 
-} 
+dbconnection()
 
 const port = process.env.PORT || 3000
 
 app.listen(
-   PORT,(()=>{`server runs on port${process.env.PORT}`})
+   port,()=>{console.log(`server runs on port ${port}`)}
 )
-}
 
-
-// this code need to debuge 
