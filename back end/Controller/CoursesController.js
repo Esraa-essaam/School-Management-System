@@ -1,4 +1,4 @@
-const Course = require("../Models/CourseModel");
+const Course = require("../models/Courses");
 
 const createCourse = async (req, res, next) => {
     try {
@@ -13,7 +13,7 @@ const createCourse = async (req, res, next) => {
 
         return res.status(201).json({
             success: true,
-            message: "Course created successfully 🎉",
+            message: "Course created successfully ",
             data: newCourse
         });
     } catch (error) {

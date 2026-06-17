@@ -10,7 +10,7 @@ const mongoose = require("mongoose")
 
 async function dbconnection() {
 try{
-    await mongoose.connect(process.env.DB_URL)
+    await mongoose.connect(process.env.MONGO_URL)
 
     console.log("server connect")
 
@@ -24,6 +24,18 @@ try{
 dbconnection()
 
 const port = process.env.PORT || 3000
+
+const Auth = require("./Routes/AuthRoute")
+app.use ("/api/Auth",Auth)
+
+const courseRouter = require("./Routes/CoursesRoute");
+app.use ("/api/course", courseRouter)
+
+const lectureRouter = require("./Routes/LectureRoute");
+app.use ("/api/lecture",lectureRouter)
+
+const examRouter = require("./Routes/ExamRoute");
+app.use ("/api/exam",examRouter)
 
 app.listen(
    port,()=>{console.log(`server runs on port ${port}`)}
