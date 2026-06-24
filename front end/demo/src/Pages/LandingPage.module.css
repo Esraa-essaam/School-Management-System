@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mulish", sans-serif;
+
+    
+}
+.TheParent{
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(to top, #6365f159, #ffffff);
+}
+
+.Navbar{
+    display:flex;
+    padding: 15px 15px;
+    align-items:center;
+    justify-content:space-between;
+    background: linear-gradient(to right, #6366F1, #8B5CF6);  
+    border-radius: 15px 15px 15px 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.LinksParent{
+display:flex;
+gap:90px;
+}
+
+.LoginButton{
+    border:1px solid var(--primary);
+    padding: 10px 18px;
+    border-radius: 17px;
+    background-color:var(--input-background);
+}
+
+.LogoName{
+    color:var(--accent-foreground);
+    font-size: 24px;
+    font-weight: 700;
+}
+.HeroSection{
+    padding:20px 20px;
+}
+
+.HeroHeading{
+    font-size:30px;
+    font-weight:900;
+}
+
+.HeroSubheading{
+    font-size: 20px;
+    font-weight: 600;
+    color:#3b246e
+}
+
+.GetStartedButton{
+    border: 1px solid rgba(245, 222, 179, 0.308) ;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 20px;
+    background:linear-gradient(to right, #6366F1, #8B5CF6);
+
+}
+
+.LearnMoreButton{
+    border: 1px solid rgba(245, 222, 179, 0.308) ;
+    padding: 15px;
+    margin: 15px;
+    border-radius: 20px;
+    background-color: #ffffff;
+}
+
